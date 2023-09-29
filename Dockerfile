@@ -23,4 +23,4 @@ COPY . .
 
 
 # Specify the command to run your Node.js application
-CMD npx sequelize init && npm start
+CMD ["npm","start"]
