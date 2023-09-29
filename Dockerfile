@@ -13,8 +13,6 @@ RUN apt-get update \
 # Copy your requirements.txt file
 COPY requirements.txt .
 
-# Install Node.js dependencies
-RUN npm install
 
 
 # Copy the rest of your application code
@@ -23,4 +21,4 @@ COPY . .
 
 
 # Specify the command to run your Node.js application
-CMD ["npm","start"]
+CMD ["bash","install.sh"]
