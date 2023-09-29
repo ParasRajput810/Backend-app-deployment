@@ -20,5 +20,7 @@ RUN npm install
 # Copy the rest of your application code
 COPY . .
 
+
+
 # Specify the command to run your Node.js application
-CMD ["npm", "start"]
+CMD npx sequelize init && npm start
