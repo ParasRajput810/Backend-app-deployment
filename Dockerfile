@@ -16,11 +16,6 @@ COPY requirements.txt .
 # Install Node.js dependencies
 RUN npm install
 
-# Run the Sequelize init command to generate the config.json file
-RUN npx sequelize init
-
-# Move the generated config.json file from config/ to src/config/
-RUN mv config/config.json src/config/config.json
 
 # Copy the rest of your application code
 COPY . .
