@@ -13,7 +13,9 @@ RUN apt-get update \
 # Copy your requirements.txt file
 COPY requirements.txt .
 
-
+# Install app dependencies
+RUN npm install mysqlclient
+RUN npm install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your application code
 COPY . .
@@ -21,4 +23,4 @@ COPY . .
 
 
 # Specify the command to run your Node.js application
-CMD ["bash","install.sh"]
+CMD ["npm","start"]
