@@ -13,13 +13,13 @@ RUN apt-get update \
 # Copy your requirements.txt file
 COPY install.sh .
 
-# Install app dependencies
-RUN bash install.sh
+
 
 
 # Copy the rest of your application code
 COPY . .
-
+# Install app dependencies
+RUN bash install.sh
 
 
 # Specify the command to run your Node.js application
