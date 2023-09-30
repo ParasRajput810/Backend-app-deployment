@@ -11,10 +11,10 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy your requirements.txt file
-COPY requirements.txt .
+COPY install.sh .
 
 # Install app dependencies
-
+RUN bash install.sh
 
 
 # Copy the rest of your application code
